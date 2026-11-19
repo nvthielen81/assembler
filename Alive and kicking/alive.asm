@@ -15,11 +15,11 @@ section .bss
 section .text
     global main
 main:
-    push rbp
-    mov rbp, rsp
-    mov rax, 1
-    mov rdi ,1
-    mov rsi , msg1
+    push rbp                                    ; maak de resiver box post o/s klaar voor gegevens
+    mov rbp, rsp                                ; voeg aan de post box het sinjatuur toe.
+    mov rax, 1                                  l resiver antwoord box klaar voor gegevens
+    mov rdi ,1                                  ; reesive box data schrijf waarde input 
+    mov rsi , msg1                              ; sinjatuur van de latter box memo
     mov rdx, msg1Len
     syscall
     mov rax , 1
