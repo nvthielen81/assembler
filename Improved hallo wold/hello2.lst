@@ -1,0 +1,25 @@
+     1                                  section .data
+     2 00000000 4E6573746F72206275-         msg db "Nestor build 1.0 ", 0
+     2 00000009 696C6420312E302000 
+     3 00000012 0A                          NL db 0xa
+     4                                  section .bss
+     5                                  section .text
+     6                                      global main 
+     7                                  
+     8                                  main:
+     9 00000000 B801000000                  mov rax , 1
+    10 00000005 BF01000000                  mov rdi , 1
+    11 0000000A 48BE-                       mov rsi , msg
+    11 0000000C [0000000000000000] 
+    12 00000014 BA10000000                  mov rdx, 16
+    13 00000019 0F05                        syscall
+    14 0000001B B801000000                  mov rax , 1
+    15 00000020 BF01000000                  mov rdi , 1
+    16 00000025 48BE-                       mov rsi , NL
+    16 00000027 [1200000000000000] 
+    17 0000002F BA01000000                  mov rdx , 1
+    18 00000034 0F05                        syscall
+    19 00000036 B83C000000                  mov rax , 60
+    20 0000003B BF00000000                  mov rdi , 0
+    21 00000040 0F05                        syscall
+    22                                      
