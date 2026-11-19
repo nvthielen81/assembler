@@ -3,8 +3,8 @@ section .data
     msg2 db "Alive and Kicking! ", 0
     radius dd 357
     pi dq 3.14
-    fmtstr dd "%s", 10 , 0
-    fmtflt dd "%lf", 10 , 0
+    fmtstr db "%s", 10 , 0
+    fmtflt db "%lf", 10 , 0
     fmtint  db "%d", 10 , 0
 section .bss
 section .text
